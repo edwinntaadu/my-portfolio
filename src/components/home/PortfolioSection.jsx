@@ -4,34 +4,59 @@ import ProjectCard from "../cards/ProjectCard";
 import ProjectPreviewModal from "../common/ProjectPreviewModal";
 
 function PortfolioSection() {
-  const featuredProjects = projects.filter((project) => project.featured);
+  const [activeFilter, setActiveFilter] = useState("web");
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handlePreviewOpen = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handlePreviewClose = () => {
-    setSelectedProject(null);
-  };
+  const filteredProjects = projects.filter(
+    (project) => project.featured && project.type === activeFilter,
+  );
 
   return (
     <section id="portfolio" className="portfolio-section py-5">
       <div className="container">
         <div className="section-heading text-center mb-5" data-aos="fade-up">
           <p className="section-subtitle">Portfolio</p>
-          <h2>My Projects</h2>
+          <h2>Selected Projects</h2>
+          <p className="mx-auto portfolio-section-text">
+            A collection of web development and design projects showcasing my
+            frontend, backend, and UI/UX skills.
+          </p>
+        </div>
+
+        <div className="portfolio-filter-wrapper" data-aos="fade-up">
+          <button
+            type="button"
+            className={`portfolio-filter-btn ${
+              activeFilter === "web" ? "active" : ""
+            }`}
+            onClick={() => setActiveFilter("web")}
+          >
+            Web
+          </button>
+
+          <button
+            type="button"
+            className={`portfolio-filter-btn ${
+              activeFilter === "design" ? "active" : ""
+            }`}
+            onClick={() => setActiveFilter("design")}
+          >
+            Design
+          </button>
         </div>
 
         <div className="row g-4">
-          {featuredProjects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div
               className="col-md-6 col-lg-4"
               key={project.id}
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <ProjectCard project={project} onPreview={handlePreviewOpen} />
+              <ProjectCard
+                project={project}
+                onPreview={() => setSelectedProject(project)}
+              />
             </div>
           ))}
         </div>
@@ -40,7 +65,7 @@ function PortfolioSection() {
       <ProjectPreviewModal
         project={selectedProject}
         isOpen={Boolean(selectedProject)}
-        onClose={handlePreviewClose}
+        onClose={() => setSelectedProject(null)}
       />
     </section>
   );

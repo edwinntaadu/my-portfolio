@@ -17,7 +17,7 @@ function AboutSection({ personalInfo }) {
             </p>
 
             <div className="mb-4" data-aos="fade-up" data-aos-delay="300">
-              <h4 className="h5 text-center">Design Tools</h4>
+              <h4 className="h5 text-center">Design Tool</h4>
 
               <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
                 {personalInfo.designTools.map((tool, index) => (
@@ -29,7 +29,7 @@ function AboutSection({ personalInfo }) {
             </div>
 
             <div className="mb-4" data-aos="fade-up" data-aos-delay="400">
-              <h4 className="h5 text-center">Technologies and Skills</h4>
+              <h4 className="h5 text-center">Technologies & Skills</h4>
 
               <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
                 {personalInfo.technologies.map((tech, index) => (
@@ -41,17 +41,13 @@ function AboutSection({ personalInfo }) {
             </div>
 
             <div data-aos="fade-up" data-aos-delay="500">
-              <h4 className="h5 text-center mb-4">Work Process</h4>
+              <h4 className="h5 text-center">Areas of Interest</h4>
 
-              <div className="row">
-                {personalInfo.workProcess.map((step, index) => (
-                  <div className="col-6 col-md-3 mb-3" key={index}>
-                    <div className="border rounded p-3 h-100 text-center">
-                      <strong>0{index + 1}</strong>
-
-                      <div className="mt-2">{step}</div>
-                    </div>
-                  </div>
+              <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                {personalInfo.areasOfInterest.map((interest, index) => (
+                  <span key={index} className="badge text-bg-secondary">
+                    {interest}
+                  </span>
                 ))}
               </div>
             </div>

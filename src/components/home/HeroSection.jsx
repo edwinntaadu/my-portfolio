@@ -10,21 +10,32 @@ function HeroSection({ personalInfo }) {
         <div className="row hero-content-row align-items-center justify-content-center">
           <div className="col-lg-8 text-center">
             <div className="hero-text">
-              <h6 className="mb-3">{personalInfo.greeting}</h6>
+              <h6 className="mb-3" data-aos="fade-up" data-aos-delay="100">
+                {personalInfo.greeting}
+              </h6>
 
-              <h1 className="display-4 fw-bold mb-3">{personalInfo.name}</h1>
+              <h1
+                className="display-4 fw-bold mb-3"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                {personalInfo.name}
+              </h1>
 
-              <h2 className="h3 mb-4">
+              <h2 className="h3 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <span className="hero-role">{typedRole}</span>
-
                 <span className="hero-cursor">|</span>
               </h2>
 
-              <p className="mb-4">{personalInfo.heroDescription}</p>
+              <p className="mb-4" data-aos="fade-up" data-aos-delay="400">
+                {personalInfo.heroDescription}
+              </p>
 
-              <Button to="#portfolio" variant="dark">
-                See My Projects
-              </Button>
+              <div data-aos="fade-up" data-aos-delay="500">
+                <Button to="#portfolio" variant="dark">
+                  See My Projects
+                </Button>
+              </div>
             </div>
           </div>
         </div>

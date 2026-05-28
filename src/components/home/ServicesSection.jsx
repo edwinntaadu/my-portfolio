@@ -6,11 +6,11 @@ function ServicesSection() {
     <section id="services" className="services-section py-5">
       <div className="container">
         <div className="text-center mb-5" data-aos="fade-up">
-          <p className="section-subtitle">Services</p>
-          <h2 className="mb-3">What I Can Help With</h2>
+          <p className="section-subtitle">What I Build</p>
+          <h2 className="mb-3">How I Can Help</h2>
           <p className="mx-auto services-section-text">
-            I help individuals and small businesses build clean, responsive, and
-            practical web experiences — from frontend interfaces to backend
+            I build clean, responsive, and user-focused web applications — from
+            polished frontend interfaces to practical backend features and API
             integrations.
           </p>
         </div>

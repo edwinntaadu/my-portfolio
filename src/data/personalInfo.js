@@ -1,21 +1,17 @@
 const personalInfo = {
   name: "Edwin",
-  brandName: "Edd",
   greeting: "Hello, I'm",
   roles: ["Full Stack Developer", "UI/UX Designer"],
   heroDescription:
-    "I build modern, responsive, and user-focused digital experiences with clean design and scalable web technologies.",
-  heroTechStack: ["HTML", "CSS", "JavaScript", "React", "Bootstrap"],
+    "I design and build modern, responsive, and user-focused web experiences for individuals, businesses, and growing brands.",
   aboutTitle: "About Me",
   aboutIntro:
     "I'm Edwin Ntaadu, a full stack developer and UI/UX designer based in Berlin.",
   aboutDescription:
-    "With a background in Mathematics and a self-taught journey into tech, I enjoy building modern web applications that combine clean user experiences with practical functionality. I’m passionate about frontend development, responsive design, and continuously growing my backend and software engineering skills",
+    "I come from a Mathematics background and started my journey into tech through self-learning, curiosity, and consistent practice. Today, I focus on building modern web applications that combine clean user interfaces, responsive design, and practical functionality. I enjoy turning ideas into usable digital products while continuing to grow my backend and software engineering skills.",
   email: "yourname@email.com",
   phone: "+00 123 456 7890",
   location: "Berlin, Germany",
-  heroImage: "/images/home-banner.png",
-  aboutImage: "/images/about-me.png",
   socials: [
     { name: "Facebook", icon: "bi bi-facebook", url: "#" },
     { name: "Twitter", icon: "bi bi-twitter", url: "#" },
@@ -28,17 +24,19 @@ const personalInfo = {
     "HTML",
     "CSS",
     "JavaScript",
-    "TypeScript",
     "React",
     "Next.js",
     "Node.js",
     "Express.js",
-    "Python",
-    "Django",
-    "MySQL",
+    "MongoDB",
     "Git",
   ],
-  workProcess: ["Research", "Design", "Develop", "Deploy"],
+  areasOfInterest: [
+    "Frontend Development",
+    "Full Stack Development",
+    "UI/UX Design",
+    "Software Engineering",
+  ],
 };
 
 export default personalInfo;

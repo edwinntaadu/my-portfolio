@@ -47,7 +47,7 @@ function Header() {
       <nav className="container site-navbar">
         <Link to="/" className="site-logo text-reset" onClick={handleLogoClick}>
           <img
-            src="/images/profile1.jpg"
+            src="/images/profile2.jpg"
             alt="Edwin"
             className="site-logo-image"
           />
