@@ -117,6 +117,59 @@
   margin-bottom: 1rem;
 }
 
+.contact-section-text {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.contact-status {
+  display: inline-flex;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(247, 23, 53, 0.12);
+  color: #f71735;
+  border: 1px solid rgba(247, 23, 53, 0.25);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-detail-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f71735;
+}
+
+.contact-detail h4 {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.contact-detail p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.contact-submit-btn {
+  min-width: 160px;
+}
+
+.contact-form-note {
+  color: rgba(255, 255, 255, 0.55);
+}
+
 .services-section-text,
 .projects-preview-text,
 .projects-page-text {

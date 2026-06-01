@@ -41,13 +41,8 @@ function ContactSection({ personalInfo }) {
       setIsFadingOut(false);
       setHasInteracted(false);
 
-      if (fadeTimeoutRef.current) {
-        clearTimeout(fadeTimeoutRef.current);
-      }
-
-      if (hideTimeoutRef.current) {
-        clearTimeout(hideTimeoutRef.current);
-      }
+      if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+      if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
 
       fadeTimeoutRef.current = setTimeout(() => {
         setIsFadingOut(true);
@@ -62,43 +57,68 @@ function ContactSection({ personalInfo }) {
 
   useEffect(() => {
     return () => {
-      if (fadeTimeoutRef.current) {
-        clearTimeout(fadeTimeoutRef.current);
-      }
-
-      if (hideTimeoutRef.current) {
-        clearTimeout(hideTimeoutRef.current);
-      }
+      if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+      if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
     };
   }, []);
 
   return (
-    <section className="contact-section py-5">
+    <section id="contact" className="contact-section py-5">
       <div className="container">
-        <div className="row g-4 align-items-start">
+        <div className="section-heading text-center mb-5" data-aos="fade-up">
+          <p className="section-subtitle">Contact</p>
+          <h2>Let’s Work Together</h2>
+          <p className="mx-auto contact-section-text">
+            Have a project idea, collaboration, or freelance opportunity? Send
+            me a message and I’ll get back to you.
+          </p>
+        </div>
+
+        <div className="row g-4 align-items-stretch">
           <div className="col-lg-5" data-aos="fade-right">
             <div className="contact-info-card card h-100">
               <div className="card-body p-4">
-                <h2 className="mb-3">Get In Touch</h2>
+                <span className="contact-status">
+                  Available for freelance work
+                </span>
+
+                <h3 className="mt-3 mb-3">Get In Touch</h3>
+
                 <p className="mb-4">
-                  I’m open to frontend, React, and software development
-                  opportunities, and I’m also happy to connect with other
-                  developers, collaborators, and recruiters.
+                  I’m open to freelance projects, collaborations, and web
+                  development opportunities. Whether you need a new website,
+                  interface improvements, or help connecting frontend and
+                  backend features, feel free to reach out.
                 </p>
 
-                <div className="mb-3">
-                  <h3 className="h6 mb-1">Email</h3>
-                  <p className="mb-0">{personalInfo.email}</p>
+                <div className="contact-detail mb-3">
+                  <span className="contact-detail-icon">
+                    <i className="bi bi-envelope"></i>
+                  </span>
+                  <div>
+                    <h4>Email</h4>
+                    <p>{personalInfo.email}</p>
+                  </div>
                 </div>
 
-                <div className="mb-3">
-                  <h3 className="h6 mb-1">Phone</h3>
-                  <p className="mb-0">{personalInfo.phone}</p>
+                <div className="contact-detail mb-3">
+                  <span className="contact-detail-icon">
+                    <i className="bi bi-telephone"></i>
+                  </span>
+                  <div>
+                    <h4>Phone</h4>
+                    <p>{personalInfo.phone}</p>
+                  </div>
                 </div>
 
-                <div className="mb-4">
-                  <h3 className="h6 mb-1">Location</h3>
-                  <p className="mb-0">{personalInfo.location}</p>
+                <div className="contact-detail mb-4">
+                  <span className="contact-detail-icon">
+                    <i className="bi bi-geo-alt"></i>
+                  </span>
+                  <div>
+                    <h4>Location</h4>
+                    <p>{personalInfo.location}</p>
+                  </div>
                 </div>
 
                 <SocialLinks socials={personalInfo.socials} />
@@ -107,9 +127,9 @@ function ContactSection({ personalInfo }) {
           </div>
 
           <div className="col-lg-7" data-aos="fade-left" data-aos-delay="150">
-            <div className="contact-form-card card">
+            <div className="contact-form-card card h-100">
               <div className="card-body p-4">
-                <h2 className="mb-4">Send a Message</h2>
+                <h3 className="mb-4">Send a Message</h3>
 
                 <form onSubmit={handleSubmit}>
                   <input
@@ -125,7 +145,7 @@ function ContactSection({ personalInfo }) {
                         type="text"
                         name="name"
                         className="form-control"
-                        placeholder="Your Name"
+                        placeholder="Your name"
                         required
                         value={formValues.name}
                         onChange={handleChange}
@@ -144,7 +164,7 @@ function ContactSection({ personalInfo }) {
                         type="email"
                         name="email"
                         className="form-control"
-                        placeholder="Your Email"
+                        placeholder="Your email"
                         required
                         value={formValues.email}
                         onChange={handleChange}
@@ -163,7 +183,7 @@ function ContactSection({ personalInfo }) {
                         type="text"
                         name="subject"
                         className="form-control"
-                        placeholder="Subject"
+                        placeholder="Project type or subject"
                         required
                         value={formValues.subject}
                         onChange={handleChange}
@@ -182,7 +202,7 @@ function ContactSection({ personalInfo }) {
                         name="message"
                         rows="5"
                         className="form-control"
-                        placeholder="Tell me about your message"
+                        placeholder="Tell me briefly about your project or message"
                         required
                         value={formValues.message}
                         onChange={handleChange}
@@ -198,7 +218,7 @@ function ContactSection({ personalInfo }) {
                     <div className="col-12">
                       <button
                         type="submit"
-                        className="btn btn-dark"
+                        className="btn btn-dark contact-submit-btn"
                         disabled={state.submitting}
                       >
                         {state.submitting ? "Sending..." : "Send Message"}
@@ -232,8 +252,8 @@ function ContactSection({ personalInfo }) {
                   </div>
                 </form>
 
-                <p className="small mt-3 mb-0">
-                  Messages are delivered through Formspree.
+                <p className="small mt-3 mb-0 contact-form-note">
+                  Messages are delivered securely through Formspree.
                 </p>
               </div>
             </div>
