@@ -1,0 +1,158 @@
+:root {
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --dark-bg: #011627;
+  --dark-bg-alt: #021b30;
+  --accent: #f71735;
+  --white: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.72);
+  --border-light: rgba(255, 255, 255, 0.08);
+
+  --modal-bg: #1e1e1e;
+  --modal-text: #f1f1f1;
+  --modal-subtext: #bbbbbb;
+  --modal-overlay: rgba(0, 0, 0, 0.85);
+  --modal-border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--dark-bg);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  background: var(--dark-bg);
+  color: var(--white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  padding-top: 80px;
+}
+
+#home,
+#about,
+#services,
+#portfolio,
+#contact {
+  scroll-margin-top: 90px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-logo,
+.nav-link-custom {
+  font-family: var(--font-heading);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.btn,
+.px-btn {
+  border-radius: 14px;
+  padding: 12px 26px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.px-btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-dark,
+.btn-primary,
+.px-btn-theme {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+  box-shadow: 0 12px 30px rgba(247, 23, 53, 0.25);
+}
+
+.btn-dark:hover,
+.btn-primary:hover,
+.px-btn-theme:hover {
+  background: #d90f2b;
+  border-color: #d90f2b;
+  color: var(--white);
+}
+
+.btn-outline-secondary {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-outline-secondary:hover {
+  background: var(--white);
+  color: var(--dark-bg);
+  border-color: var(--white);
+}
+
+.badge.text-bg-secondary,
+.badge.text-bg-dark {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: var(--white) !important;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-bg);
+  z-index: 9999;
+}
+
+.page-loader-spinner {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: var(--accent);
+  border-right-color: var(--accent);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

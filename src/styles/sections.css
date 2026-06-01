@@ -1,0 +1,51 @@
+.about-section,
+.services-section,
+.portfolio-section,
+.contact-section {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  color: var(--white);
+}
+
+.about-section,
+.portfolio-section {
+  background: var(--dark-bg-alt);
+}
+
+.services-section,
+.contact-section {
+  background: var(--dark-bg);
+}
+
+.about-section h2,
+.services-section h2,
+.portfolio-section h2,
+.contact-section h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.about-section h5,
+.about-section h4,
+.contact-section h3 {
+  color: inherit;
+}
+
+.services-section-text,
+.projects-page-text {
+  max-width: 700px;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 767px) {
+  .about-section,
+  .services-section,
+  .portfolio-section,
+  .contact-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
