@@ -1,14 +1,14 @@
 const personalInfo = {
-  name: "Edwin",
+  name: "Edwin Ntaadu",
   greeting: "Hello, I'm",
   roles: ["Full Stack Developer", "UI/UX Designer"],
   heroDescription:
-    "I design and build modern, responsive, and user-focused web experiences for individuals, businesses, and growing brands.",
+    "I design and build modern, responsive, and user-focused web applications that help businesses, startups, and individuals bring their ideas to life.",
   aboutTitle: "About Me",
   aboutIntro:
     "I'm Edwin Ntaadu, a full stack developer and UI/UX designer based in Berlin.",
   aboutDescription:
-    "I come from a Mathematics background and started my journey into tech through self-learning, curiosity, and consistent practice. Today, I focus on building modern web applications that combine clean user interfaces, responsive design, and practical functionality. I enjoy turning ideas into usable digital products while continuing to grow my backend and software engineering skills.",
+    "With a background in Mathematics and a passion for problem-solving, I build modern web applications that combine clean design, responsive user experiences, and practical functionality. My focus is on creating scalable, user-centered solutions while continuously expanding my expertise across frontend, backend, and software development.",
   email: "yourname@email.com",
   phone: "+00 123 456 7890",
   location: "Berlin, Germany",
@@ -19,7 +19,7 @@ const personalInfo = {
     { name: "LinkedIn", icon: "bi bi-linkedin", url: "#" },
     { name: "GitHub", icon: "bi bi-github", url: "#" },
   ],
-  designTools: ["Figma"],
+  designTools: ["Figma", "Miro"],
   technologies: [
     "HTML",
     "CSS",
@@ -32,8 +32,8 @@ const personalInfo = {
     "Git",
   ],
   areasOfInterest: [
-    "Frontend Development",
     "Full Stack Development",
+    "Frontend Architecture",
     "UI/UX Design",
     "Software Engineering",
   ],

@@ -22,6 +22,11 @@ function HeroSection({ personalInfo }) {
                 {personalInfo.name}
               </h1>
 
+              <div className="availability-badge mb-4">
+                <span className="availability-dot"></span>
+                Open to Opportunities
+              </div>
+
               <h2 className="h3 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <span className="hero-role">{typedRole}</span>
                 <span className="hero-cursor">|</span>

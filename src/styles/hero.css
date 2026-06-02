@@ -74,6 +74,36 @@
   animation: blink 1s steps(1) infinite;
 }
 
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+
+  color: #86efac;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  margin-bottom: 1rem;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+}
+
 @keyframes blink {
   50% {
     opacity: 0;
