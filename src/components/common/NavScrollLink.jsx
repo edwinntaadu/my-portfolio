@@ -20,18 +20,30 @@ function NavScrollLink({
 
     const id = to.replace("#", "");
 
+    const scrollToSection = () => {
+      const section = document.getElementById(id);
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    };
+
+    if (onNavigate) onNavigate();
+
     if (location.pathname !== "/") {
-      if (onNavigate) onNavigate();
-      navigate(`/#${id}`);
+      navigate("/");
+
+      setTimeout(() => {
+        scrollToSection();
+      }, 100);
+
       return;
     }
 
-    const section = document.getElementById(id);
-
-    if (section) {
-      if (onNavigate) onNavigate();
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    scrollToSection();
   };
 
   const combinedClassName =

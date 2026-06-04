@@ -9,8 +9,10 @@ const personalInfo = {
     "I'm Edwin Ntaadu, a full stack developer and UI/UX designer based in Berlin.",
   aboutDescription:
     "With a background in Mathematics and a passion for problem-solving, I build modern web applications that combine clean design, responsive user experiences, and practical functionality. My focus is on creating scalable, user-centered solutions while continuously expanding my expertise across frontend, backend, and software development.",
-  email: "yourname@email.com",
-  phone: "+00 123 456 7890",
+  email: "edwinntaadu@gmail.com",
+  phone: "+4917672804055",
+  whatsapp: "+4917672804055",
+  whatsappDisplay: "+49 176 72804055",
   location: "Berlin, Germany",
   socials: [
     { name: "Facebook", icon: "bi bi-facebook", url: "#" },

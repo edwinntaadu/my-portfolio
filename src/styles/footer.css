@@ -54,13 +54,13 @@
 }
 
 .footer-socials a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   background: var(--accent);
+  box-shadow: 0 10px 25px rgba(247, 23, 53, 0.35);
 }
 
 .footer-divider {
-  margin: 2rem 0;
-  opacity: 0.1;
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .footer-bottom {
@@ -81,6 +81,21 @@
   .footer-bottom {
     justify-content: center;
     text-align: center;
+  }
+
+  .footer-text {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-socials {
+    justify-content: center;
   }
 
   .footer-text {

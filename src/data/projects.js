@@ -4,7 +4,8 @@ const projects = [
     slug: "ecommerce-platform",
     title: "E-Commerce Platform",
     type: "web",
-    category: "Full Stack Project",
+    category: "Web Development",
+    year: 2024,
     shortDescription:
       "A modern e-commerce platform featuring product browsing, shopping cart functionality, and secure checkout.",
     description:
@@ -18,9 +19,10 @@ const projects = [
   {
     id: 2,
     slug: "task-management-app",
-    title: "Task Management Application",
+    title: "TaskFlow",
     type: "web",
-    category: "Frontend Project",
+    category: "Web Development",
+    year: 2024,
     shortDescription:
       "A productivity-focused web application for managing tasks, projects, and team collaboration.",
     description:
@@ -29,14 +31,15 @@ const projects = [
     technologies: ["React", "JavaScript", "CSS", "REST API"],
     liveDemo: "",
     github: "",
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
     slug: "authentication-dashboard",
-    title: "Authentication Dashboard",
+    title: "AuthFlow Platform",
     type: "web",
-    category: "Backend Project",
+    category: "Web Development",
+    year: 2024,
     shortDescription:
       "A secure authentication system with user management, protected routes, and role-based access control.",
     description:
@@ -45,14 +48,15 @@ const projects = [
     technologies: ["Node.js", "Express.js", "MongoDB", "JWT"],
     liveDemo: "",
     github: "",
-    featured: true,
+    featured: false,
   },
   {
     id: 4,
     slug: "mobile-banking-ui",
-    title: "Mobile Banking UI",
+    title: "FinPay Banking App",
     type: "design",
     category: "UI/UX Design",
+    year: 2024,
     shortDescription:
       "A modern banking interface focused on accessibility, usability, and responsive user experiences.",
     description:
@@ -69,6 +73,7 @@ const projects = [
     title: "Food Delivery App Design",
     type: "design",
     category: "UI/UX Design",
+    year: 2024,
     shortDescription:
       "A food ordering experience designed to simplify browsing, ordering, and checkout flows.",
     description:
@@ -77,14 +82,15 @@ const projects = [
     technologies: ["Figma", "User Flows", "Prototyping", "Design Systems"],
     liveDemo: "",
     github: "",
-    featured: true,
+    featured: false,
   },
   {
     id: 6,
     slug: "analytics-dashboard-design",
-    title: "Analytics Dashboard Design",
+    title: "Insight Analytics Dashboard",
     type: "design",
-    category: "Dashboard Design",
+    category: "UI/UX Design",
+    year: 2024,
     shortDescription:
       "A responsive dashboard interface focused on data visualization and information hierarchy.",
     description:
@@ -98,7 +104,7 @@ const projects = [
     ],
     liveDemo: "",
     github: "",
-    featured: true,
+    featured: false,
   },
 ];
 

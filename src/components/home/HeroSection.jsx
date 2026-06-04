@@ -22,7 +22,7 @@ function HeroSection({ personalInfo }) {
                 {personalInfo.name}
               </h1>
 
-              <div className="availability-badge mb-4">
+              <div className="availability-badge mb-2">
                 <span className="availability-dot"></span>
                 Open to Opportunities
               </div>

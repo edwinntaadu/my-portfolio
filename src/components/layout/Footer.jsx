@@ -6,11 +6,11 @@ function Footer() {
       <div className="container">
         <div className="row g-4 align-items-center">
           <div className="col-lg-5">
-            <h3 className="footer-title">Edd</h3>
+            <h3 className="footer-title">Edwin Ntaadu</h3>
 
             <p className="footer-text">
-              Full Stack Developer & UI/UX Designer building modern, responsive,
-              and user-focused web experiences.
+              Designing and building modern web experiences with a focus on
+              usability, performance, and clean design.
             </p>
           </div>
 
@@ -48,9 +48,9 @@ function Footer() {
         <hr className="footer-divider" />
 
         <div className="footer-bottom">
-          <p>© {currentYear} Edd. All rights reserved.</p>
+          <p>© {currentYear} Edwin Ntaadu. All rights reserved.</p>
 
-          <p>Designed and developed by Edd.</p>
+          <p>Made with 🤍</p>
         </div>
       </div>
     </footer>

@@ -76,3 +76,34 @@
   opacity: 0;
   transform: translateY(-6px);
 }
+
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+}
+
+.contact-info-card,
+.contact-form-card {
+  height: 100%;
+}
+
+.contact-info-card {
+  position: relative;
+}
+
+.contact-form-card .form-control {
+  border-radius: 12px;
+}
+
+.contact-form-card textarea {
+  resize: none;
+}
+
+.contact-submit-btn {
+  min-width: 180px;
+}

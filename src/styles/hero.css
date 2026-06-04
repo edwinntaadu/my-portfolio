@@ -50,7 +50,7 @@
 }
 
 .hero-text h2 {
-  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
   font-weight: 600;
   color: inherit;
 }
@@ -79,7 +79,7 @@
   align-items: center;
   gap: 8px;
 
-  padding: 6px 12px;
+  padding: 5px 10px;
 
   border-radius: 999px;
 
@@ -88,7 +88,7 @@
 
   color: #86efac;
 
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
 
   margin-bottom: 1rem;

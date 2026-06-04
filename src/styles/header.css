@@ -51,7 +51,6 @@
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  background: rgba(1, 22, 39, 0.98);
 }
 
 .nav-link-custom {
@@ -88,7 +87,7 @@
   display: none;
   position: relative;
   padding: 0;
-  z-index: 1102;
+  z-index: 1200;
 }
 
 .site-menu-toggle span {
@@ -122,22 +121,43 @@
     display: block;
   }
 
+  .site-menu-toggle:focus {
+    outline: none;
+  }
+
+  .site-menu-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 8px;
+  }
+
   .site-nav-links {
-    position: absolute;
-    top: calc(100% + 8px);
+    position: fixed;
+    top: 72px;
     left: 0;
     right: 0;
+    z-index: 999;
+
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    padding: 12px 20px 20px;
-    border-radius: 16px;
-    transform: translateY(-12px);
+
+    padding: 18px 28px 22px;
+
+    background: #011627;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease;
+
+    transition:
+      transform 0.35s ease,
+      opacity 0.3s ease,
+      visibility 0.3s ease;
   }
 
   .site-nav-links.open {
@@ -147,14 +167,10 @@
     pointer-events: auto;
   }
 
-  .site-nav-links .nav-link-custom,
-  .site-nav-links .btn {
+  .site-nav-links .nav-link-custom {
     width: 100%;
-    padding: 12px 0;
-  }
-
-  .site-nav-links .btn {
-    margin-top: 10px;
+    padding: 13px 0;
+    font-size: 1rem;
   }
 
   .nav-link-active::after {

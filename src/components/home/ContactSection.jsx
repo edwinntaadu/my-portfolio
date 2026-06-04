@@ -78,17 +78,14 @@ function ContactSection({ personalInfo }) {
           <div className="col-lg-5" data-aos="fade-right">
             <div className="contact-info-card card h-100">
               <div className="card-body p-4">
-                <span className="contact-status">
-                  Available for freelance work
-                </span>
+                <span className="contact-status">Open to Opportunities</span>
 
-                <h3 className="mt-3 mb-3">Get In Touch</h3>
+                <h3 className="mt-3 mb-2">Let's Build Something Great</h3>
 
                 <p className="mb-4">
-                  I’m open to freelance projects, collaborations, and web
-                  development opportunities. Whether you need a new website,
-                  interface improvements, or help connecting frontend and
-                  backend features, feel free to reach out.
+                  Whether you're looking to build a new web application, improve
+                  an existing product, or discuss a potential collaboration, I'd
+                  love to hear from you.
                 </p>
 
                 <div className="contact-detail mb-3">
@@ -97,17 +94,33 @@ function ContactSection({ personalInfo }) {
                   </span>
                   <div>
                     <h4>Email</h4>
-                    <p>{personalInfo.email}</p>
+                    <p>
+                      <a
+                        href={`mailto:${personalInfo.email}`}
+                        className="contact-link"
+                      >
+                        {personalInfo.email}
+                      </a>
+                    </p>
                   </div>
                 </div>
 
                 <div className="contact-detail mb-3">
                   <span className="contact-detail-icon">
-                    <i className="bi bi-telephone"></i>
+                    <i className="bi bi-whatsapp"></i>
                   </span>
                   <div>
-                    <h4>Phone</h4>
-                    <p>{personalInfo.phone}</p>
+                    <h4>WhatsApp</h4>
+                    <p>
+                      <a
+                        href={`https://wa.me/${personalInfo.whatsapp}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="contact-link"
+                      >
+                        {personalInfo.whatsappDisplay}
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -202,7 +215,7 @@ function ContactSection({ personalInfo }) {
                         name="message"
                         rows="5"
                         className="form-control"
-                        placeholder="Tell me briefly about your project or message"
+                        placeholder="Tell me about your project, idea, or how I can help..."
                         required
                         value={formValues.message}
                         onChange={handleChange}
@@ -221,7 +234,7 @@ function ContactSection({ personalInfo }) {
                         className="btn btn-dark contact-submit-btn"
                         disabled={state.submitting}
                       >
-                        {state.submitting ? "Sending..." : "Send Message"}
+                        {state.submitting ? "Sending..." : "Let's Talk"}
                       </button>
                     </div>
 
@@ -251,10 +264,6 @@ function ContactSection({ personalInfo }) {
                       )}
                   </div>
                 </form>
-
-                <p className="small mt-3 mb-0 contact-form-note">
-                  Messages are delivered securely through Formspree.
-                </p>
               </div>
             </div>
           </div>
