@@ -1,10 +1,14 @@
-function ProjectCard({ project, onPreview }) {
-  const visibleTechnologies = project.technologies?.slice(0, 3) || [];
-  const extraTechCount =
-    project.technologies?.length - visibleTechnologies.length;
+import { Link } from "react-router-dom";
+
+function ProjectCard({ project }) {
+  const visibleTechnologies = project.technologies?.slice(0, 4) || [];
 
   return (
     <article className="project-card card h-100" data-aos="zoom-in-up">
+      {project.flagship && (
+        <div className="featured-project-badge">Featured Project</div>
+      )}
+
       <div className="project-image-wrapper">
         <img
           src={project.image}
@@ -28,31 +32,12 @@ function ProjectCard({ project, onPreview }) {
               {tech}
             </span>
           ))}
-
-          {extraTechCount > 0 && (
-            <span className="badge text-bg-secondary">+{extraTechCount}</span>
-          )}
         </div>
 
         <div className="project-card-actions mt-auto">
-          <button
-            type="button"
-            className="btn btn-dark"
-            onClick={() => onPreview(project)}
-          >
+          <Link to={`/projects/${project.slug}`} className="btn btn-dark">
             View Project
-          </button>
-
-          {project.liveDemo && (
-            <a
-              href={project.liveDemo}
-              className="project-card-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Live Demo
-            </a>
-          )}
+          </Link>
         </div>
       </div>
     </article>

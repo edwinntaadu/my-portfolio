@@ -1,14 +1,13 @@
 const personalInfo = {
   name: "Edwin Ntaadu",
   greeting: "Hello, I'm",
-  roles: ["Full Stack Developer", "UI/UX Designer"],
   heroDescription:
-    "I design and build modern, responsive, and user-focused web applications that help businesses, startups, and individuals bring their ideas to life.",
+    "I help businesses and individuals turn ideas into modern, responsive web applications.",
   aboutTitle: "About Me",
   aboutIntro:
-    "I'm Edwin Ntaadu, a full stack developer and UI/UX designer based in Berlin.",
+    "I'm a self-taught developer with a Mathematics background who enjoys turning ideas into practical, user-focused web applications.",
   aboutDescription:
-    "With a background in Mathematics and a passion for problem-solving, I build modern web applications that combine clean design, responsive user experiences, and practical functionality. My focus is on creating scalable, user-centered solutions while continuously expanding my expertise across frontend, backend, and software development.",
+    "My journey into software development began with a strong foundation in Mathematics and problem-solving. As a self-taught developer, I enjoy building modern web applications that combine clean design, responsive user experiences, and practical functionality. I'm particularly interested in creating scalable digital products that solve real-world problems.",
   email: "edwinntaadu@gmail.com",
   phone: "+4917672804055",
   whatsapp: "+4917672804055",

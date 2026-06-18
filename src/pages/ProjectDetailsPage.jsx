@@ -8,88 +8,123 @@ function ProjectDetailsPage() {
 
   if (!project) {
     return (
-      <div className="container py-5">
-        <h1 className="mb-3">Project Not Found</h1>
-        <p className="mb-4">The project you are looking for does not exist.</p>
-        <Link to="/projects" className="btn btn-dark">
-          Back to Projects
-        </Link>
-      </div>
+      <main className="project-details-page">
+        <div className="container py-5">
+          <h1 className="mb-3">Project Not Found</h1>
+          <p className="mb-4">
+            The project you are looking for does not exist.
+          </p>
+
+          <Link to="/projects" className="btn btn-dark">
+            Back to Projects
+          </Link>
+        </div>
+      </main>
     );
   }
 
   return (
-    <div className="container py-5">
-      <div className="mb-4">
-        <p className="text-uppercase small mb-2">{project.category}</p>
-        <h1 className="mb-3">{project.title}</h1>
-        <p className="lead mb-4">{project.shortDescription}</p>
-      </div>
+    <main className="project-details-page">
+      <section className="project-details-hero">
+        <div className="container">
+          <Link to="/projects" className="project-back-link">
+            ← Back to Projects
+          </Link>
 
-      <div className="mb-4">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="img-fluid rounded shadow-sm"
-        />
-      </div>
+          <p className="project-card-category text-uppercase small mb-2">
+            {project.category} • {project.year}
+          </p>
 
-      <div className="row g-4">
-        <div className="col-lg-8">
-          <div className="mb-4">
-            <h2 className="h4 mb-3">About This Project</h2>
-            <p>{project.description}</p>
+          <h1 className="project-details-title">{project.title}</h1>
+
+          <p className="project-details-lead">{project.shortDescription}</p>
+
+          <div className="project-details-image-wrap">
+            <img
+              src={project.image}
+              alt={`${project.title} preview`}
+              className="project-details-image"
+            />
           </div>
         </div>
+      </section>
 
-        <div className="col-lg-4">
-          <div className="card shadow-sm">
-            <div className="card-body">
-              <h2 className="h5 mb-3">Technologies Used</h2>
-
-              <div className="d-flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="badge text-bg-secondary">
-                    {tech}
-                  </span>
-                ))}
+      <section className="project-details-content">
+        <div className="container">
+          <div className="row g-4">
+            <div className="col-lg-8">
+              <div className="project-details-card">
+                <h2>Project Overview</h2>
+                <p>{project.description}</p>
               </div>
+            </div>
 
-              <div className="d-grid gap-2">
-                {project.liveDemo && (
+            <div className="col-lg-4">
+              <aside className="project-details-card project-sidebar">
+                <h2>Project Info</h2>
+
+                <div className="project-info-list">
+                  <div>
+                    <span>Category</span>
+                    <strong>{project.category}</strong>
+                  </div>
+
+                  <div>
+                    <span>Year</span>
+                    <strong>{project.year}</strong>
+                  </div>
+
+                  <div>
+                    <span>Type</span>
+                    <strong>{project.type === "web" ? "Web" : "Design"}</strong>
+                  </div>
+                </div>
+
+                <h3>Technologies</h3>
+
+                <div className="d-flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="badge text-bg-secondary">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="d-grid gap-2">
                   <a
-                    href={project.liveDemo}
-                    className="btn btn-dark"
-                    target="_blank"
-                    rel="noreferrer"
+                    href={project.liveDemo || "#"}
+                    className={`btn btn-dark ${
+                      !project.liveDemo ? "disabled" : ""
+                    }`}
+                    target={project.liveDemo ? "_blank" : undefined}
+                    rel={project.liveDemo ? "noreferrer" : undefined}
+                    aria-disabled={!project.liveDemo}
                   >
                     Live Demo
                   </a>
-                )}
 
-                {project.github && (
                   <a
-                    href={project.github}
-                    className="btn btn-outline-secondary"
-                    target="_blank"
-                    rel="noreferrer"
+                    href={project.github || "#"}
+                    className={`btn btn-outline-secondary ${
+                      !project.github ? "disabled" : ""
+                    }`}
+                    target={project.github ? "_blank" : undefined}
+                    rel={project.github ? "noreferrer" : undefined}
+                    aria-disabled={!project.github}
                   >
                     GitHub Repository
                   </a>
-                )}
 
-                <Link
-                  to="/projects"
-                  className="btn btn-link text-decoration-none"
-                >
-                  Back to Projects
-                </Link>
-              </div>
+                  <Link to="/#contact" className="btn btn-outline-secondary">
+                    Discuss a Similar Project
+                  </Link>
+                </div>
+              </aside>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

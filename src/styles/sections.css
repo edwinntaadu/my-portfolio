@@ -34,6 +34,14 @@
   color: inherit;
 }
 
+.about-list-text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 500;
+  line-height: 1.8;
+  margin: 0;
+}
+
 .services-section-text,
 .projects-page-text {
   max-width: 700px;

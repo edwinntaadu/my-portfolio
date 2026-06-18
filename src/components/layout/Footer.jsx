@@ -1,3 +1,5 @@
+import personalInfo from "../../data/personalInfo";
+
 function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -9,9 +11,12 @@ function Footer() {
             <h3 className="footer-title">Edwin Ntaadu</h3>
 
             <p className="footer-text">
-              Designing and building modern web experiences with a focus on
-              usability, performance, and clean design.
+              Full Stack Developer & UI/UX Designer based in Berlin.
             </p>
+
+            <a href={`mailto:${personalInfo.email}`} className="footer-contact">
+              {personalInfo.email}
+            </a>
           </div>
 
           <div className="col-lg-4">
@@ -49,8 +54,6 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>© {currentYear} Edwin Ntaadu. All rights reserved.</p>
-
-          <p>Made with 🤍</p>
         </div>
       </div>
     </footer>

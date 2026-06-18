@@ -1,11 +1,9 @@
 import { useState } from "react";
 import projects from "../../data/projects";
 import ProjectCard from "../cards/ProjectCard";
-import ProjectPreviewModal from "../common/ProjectPreviewModal";
 
 function PortfolioSection() {
   const [activeFilter, setActiveFilter] = useState("web");
-  const [selectedProject, setSelectedProject] = useState(null);
 
   const filteredProjects = projects.filter(
     (project) => project.featured && project.type === activeFilter,
@@ -16,7 +14,7 @@ function PortfolioSection() {
       <div className="container">
         <div className="section-heading text-center mb-5" data-aos="fade-up">
           <p className="section-subtitle">Portfolio</p>
-          <h2>Selected Projects</h2>
+          <h2>Featured Projects</h2>
           <p className="mx-auto portfolio-section-text">
             A collection of web development and design projects showcasing my
             frontend, backend, and UI/UX skills.
@@ -53,20 +51,11 @@ function PortfolioSection() {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <ProjectCard
-                project={project}
-                onPreview={() => setSelectedProject(project)}
-              />
+              <ProjectCard project={project} />
             </div>
           ))}
         </div>
       </div>
-
-      <ProjectPreviewModal
-        project={selectedProject}
-        isOpen={Boolean(selectedProject)}
-        onClose={() => setSelectedProject(null)}
-      />
     </section>
   );
 }

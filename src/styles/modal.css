@@ -12,7 +12,8 @@
 .project-modal-content {
   position: relative;
   width: 100%;
-  background: var(--modal-bg);
+  background: #11243a;
+  /*background: var(--modal-bg);*/
   color: var(--modal-text);
   border: 1px solid var(--modal-border);
   border-radius: 18px;

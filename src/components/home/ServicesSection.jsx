@@ -9,9 +9,8 @@ function ServicesSection() {
           <p className="section-subtitle">What I Build</p>
           <h2 className="mb-3">How I Can Help</h2>
           <p className="mx-auto services-section-text">
-            I build clean, responsive, and user-focused web applications — from
-            polished frontend interfaces to practical backend features and API
-            integrations.
+            I build responsive web applications with clean interfaces, practical
+            backend features, and user-focused design.
           </p>
         </div>
 
