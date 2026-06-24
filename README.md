@@ -1,16 +1,94 @@
-# React + Vite
+# Edwin Ntaadu Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio website built to present Edwin Ntaadu's
+background, technical skills, services, and software development projects.
 
-Currently, two official plugins are available:
+The website introduces Edwin as a self-taught developer with a Mathematics
+background and an interest in building practical, user-focused web
+applications. Visitors can explore featured projects, view individual project
+details, learn about the technologies Edwin works with, and make contact
+through the integrated contact form.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Responsive single-page portfolio homepage
+- About, services, portfolio, and contact sections
+- Filterable featured projects
+- Dedicated project listing and project detail pages
+- Smooth scrolling and scroll-based animations
+- Responsive navigation for desktop and mobile
+- Contact form powered by Formspree
+- Reusable React components and data-driven content
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built With
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- React Router
+- JavaScript
+- Bootstrap
+- Bootstrap Icons
+- AOS (Animate on Scroll)
+- Formspree
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Routes
+
+- `/` - Main portfolio page
+- `/projects` - Complete project collection
+- `/projects/:slug` - Individual project details
+
+## Getting Started
+
+### Prerequisites
+
+Install Node.js and npm before running the project.
+
+### Installation
+
+```bash
+git clone <repository-url>
+cd edwin-portfolio
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+src/
+  components/   Reusable interface and layout components
+  data/         Personal information, services, and project content
+  hooks/        Custom React hooks
+  pages/        Route-level pages
+  services/     External service integrations
+  styles/       Global and component-specific styles
+```
+
+## Contact
+
+Edwin Ntaadu  
+Berlin, Germany  
+Email: edwinntaadu@gmail.com
