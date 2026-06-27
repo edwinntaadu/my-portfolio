@@ -9,8 +9,9 @@ function ProjectsPage() {
           <p className="section-subtitle">Portfolio</p>
           <h1 className="mb-3">All Projects</h1>
           <p className="projects-page-text">
-            A collection of web development and design projects showcasing
-            practical frontend, backend, and UI/UX work.
+            A selection of real frontend and full-stack applications built with
+            React, Node.js, Express, and MongoDB, with a focus on responsive
+            interfaces, practical user flows, and complete product experiences.
           </p>
         </div>
 

@@ -70,6 +70,13 @@
   font-weight: 700;
 }
 
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .hero-specialization {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.65);
@@ -165,6 +172,13 @@
   .hero-text {
     transform: none;
     padding-bottom: 32px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 280px;
+    margin: 0 auto;
   }
 
   .hero-specialization {

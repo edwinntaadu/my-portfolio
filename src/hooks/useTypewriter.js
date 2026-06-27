@@ -24,8 +24,10 @@ function useTypewriter(words = [], speed = 120, pause = 1500) {
         setDisplayText(currentWord.slice(0, displayText.length - 1));
       }, speed / 2);
     } else if (isDeleting && displayText.length === 0) {
-      setIsDeleting(false);
-      setWordIndex((prev) => (prev + 1) % words.length);
+      timer = setTimeout(() => {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % words.length);
+      }, 0);
     }
 
     return () => clearTimeout(timer);

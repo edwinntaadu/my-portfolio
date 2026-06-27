@@ -36,22 +36,26 @@ function ContactSection({ personalInfo }) {
 
   useEffect(() => {
     if (state.succeeded) {
-      setFormValues(initialFormValues);
-      setShowSuccessMessage(true);
-      setIsFadingOut(false);
-      setHasInteracted(false);
-
       if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
       if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
 
-      fadeTimeoutRef.current = setTimeout(() => {
-        setIsFadingOut(true);
-      }, 3000);
-
-      hideTimeoutRef.current = setTimeout(() => {
-        setShowSuccessMessage(false);
+      const resetTimeout = setTimeout(() => {
+        setFormValues(initialFormValues);
+        setShowSuccessMessage(true);
         setIsFadingOut(false);
-      }, 4000);
+        setHasInteracted(false);
+
+        fadeTimeoutRef.current = setTimeout(() => {
+          setIsFadingOut(true);
+        }, 3000);
+
+        hideTimeoutRef.current = setTimeout(() => {
+          setShowSuccessMessage(false);
+          setIsFadingOut(false);
+        }, 4000);
+      }, 0);
+
+      return () => clearTimeout(resetTimeout);
     }
   }, [state.succeeded]);
 
@@ -69,8 +73,8 @@ function ContactSection({ personalInfo }) {
           <p className="section-subtitle">Contact</p>
           <h2>Let’s Work Together</h2>
           <p className="mx-auto contact-section-text">
-            Have a project idea, collaboration, or freelance opportunity? Send
-            me a message and I’ll get back to you.
+            Have a role, freelance project, or collaboration in mind? Send me a
+            message and I’ll get back to you.
           </p>
         </div>
 

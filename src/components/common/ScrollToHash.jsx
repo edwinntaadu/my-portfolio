@@ -5,7 +5,10 @@ function ScrollToHash() {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash) return;
+    if (!location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      return;
+    }
 
     const id = location.hash.replace("#", "");
 
@@ -18,7 +21,7 @@ function ScrollToHash() {
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [location]);
+  }, [location.pathname, location.hash]);
 
   return null;
 }

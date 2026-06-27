@@ -16,9 +16,8 @@ function AboutSection({ personalInfo }) {
               {personalInfo.aboutDescription}
             </p>
             <p>
-              Outside of coding, I enjoy exploring UI/UX design, software
-              architecture, and building projects that improve everyday
-              experiences.
+              My Mathematics background strengthens the analytical thinking I
+              bring to both design decisions and technical problem-solving.
             </p>
 
             <div className="mb-4" data-aos="fade-up" data-aos-delay="300">

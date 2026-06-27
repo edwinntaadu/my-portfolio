@@ -1,26 +1,34 @@
 const personalInfo = {
   name: "Edwin Ntaadu",
   greeting: "Hello, I'm",
+  role: "Full-Stack Developer & UI/UX Designer",
   heroDescription:
-    "I help businesses and individuals turn ideas into modern, responsive web applications.",
+    "I design and build responsive, user-focused digital products, from interface concepts and prototypes to full-stack web applications.",
   aboutTitle: "About Me",
   aboutIntro:
-    "I'm a self-taught developer with a Mathematics background who enjoys turning ideas into practical, user-focused web applications.",
+    "I'm a full-stack developer and UI/UX designer with a Mathematics background and a practical, problem-solving approach.",
   aboutDescription:
-    "My journey into software development began with a strong foundation in Mathematics and problem-solving. As a self-taught developer, I enjoy building modern web applications that combine clean design, responsive user experiences, and practical functionality. I'm particularly interested in creating scalable digital products that solve real-world problems.",
+    "I combine UI/UX design and software development to create digital products that are both usable and technically practical. My process includes understanding user needs, planning flows, designing interfaces, and implementing responsive web experiences with clean frontend architecture and reliable backend functionality.",
   email: "edwinntaadu@gmail.com",
-  phone: "+4917672804055",
-  whatsapp: "+4917672804055",
-  whatsappDisplay: "+49 176 72804055",
+  whatsapp: "+4917672804054",
+  whatsappDisplay: "+49 176 72804054",
   location: "Berlin, Germany",
+  github: "https://github.com/edwinntaadu",
   socials: [
-    { name: "Facebook", icon: "bi bi-facebook", url: "#" },
-    { name: "Twitter", icon: "bi bi-twitter", url: "#" },
-    { name: "Instagram", icon: "bi bi-instagram", url: "#" },
-    { name: "LinkedIn", icon: "bi bi-linkedin", url: "#" },
-    { name: "GitHub", icon: "bi bi-github", url: "#" },
+    {
+      name: "GitHub",
+      icon: "bi bi-github",
+      url: "https://github.com/edwinntaadu",
+    },
   ],
-  designTools: ["Figma", "Miro"],
+  designTools: [
+    "Figma",
+    "Miro",
+    "Wireframing",
+    "User Flows",
+    "Prototyping",
+    "Design Systems",
+  ],
   technologies: [
     "HTML",
     "CSS",
@@ -36,7 +44,7 @@ const personalInfo = {
     "Full Stack Development",
     "Frontend Architecture",
     "UI/UX Design",
-    "Software Engineering",
+    "Product Design",
   ],
 };
 

@@ -23,9 +23,9 @@ const services = [
   {
     id: 5,
     icon: "bi bi-palette",
-    title: "UI/UX Implementation",
+    title: "UI/UX Design",
     description:
-      "I turn design ideas into polished web pages with attention to spacing, typography, accessibility, and visual consistency.",
+      "I plan user flows, create wireframes and prototypes, and design clear interfaces with attention to usability, accessibility, and visual consistency.",
   },
 ];
 

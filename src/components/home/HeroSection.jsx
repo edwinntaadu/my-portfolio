@@ -29,17 +29,31 @@ function HeroSection({ personalInfo }) {
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                Full Stack Developer
+                {personalInfo.role}
               </h2>
 
               <p className="mb-4" data-aos="fade-up" data-aos-delay="400">
                 {personalInfo.heroDescription}
               </p>
 
-              <div data-aos="fade-up" data-aos-delay="500">
+              <div
+                className="hero-actions"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
                 <Button to="#portfolio" variant="dark">
-                  View My Work
+                  View Projects
                 </Button>
+
+                <a
+                  href={personalInfo.github}
+                  className="btn btn-outline-light"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="bi bi-github me-2"></i>
+                  View GitHub
+                </a>
               </div>
 
               <div className="scroll-indicator">

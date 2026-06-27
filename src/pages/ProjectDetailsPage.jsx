@@ -39,6 +39,32 @@ function ProjectDetailsPage() {
 
           <p className="project-details-lead">{project.shortDescription}</p>
 
+          <div className="project-details-actions">
+            {project.liveDemo && (
+              <a
+                href={project.liveDemo}
+                className="btn btn-dark"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="bi bi-box-arrow-up-right me-2"></i>
+                Live Demo
+              </a>
+            )}
+
+            {project.github && (
+              <a
+                href={project.github}
+                className="btn btn-outline-secondary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="bi bi-github me-2"></i>
+                GitHub Repository
+              </a>
+            )}
+          </div>
+
           <div className="project-details-image-wrap">
             <img
               src={project.image}
@@ -53,10 +79,61 @@ function ProjectDetailsPage() {
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-8">
-              <div className="project-details-card">
+              <div className="project-details-card mb-4">
                 <h2>Project Overview</h2>
                 <p>{project.description}</p>
               </div>
+
+              {project.role && (
+                <div className="project-details-card mb-4">
+                  <h2>My Role</h2>
+                  <p>{project.role}</p>
+                </div>
+              )}
+
+              {project.keyFeatures?.length > 0 && (
+                <div className="project-details-card mb-4">
+                  <h2>Key Features</h2>
+                  <ul className="project-details-list">
+                    {project.keyFeatures.map((feature) => (
+                      <li key={feature}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {project.technicalChallenges?.length > 0 && (
+                <div className="project-details-card mb-4">
+                  <h2>Technical Challenges</h2>
+                  <ul className="project-details-list">
+                    {project.technicalChallenges.map((challenge) => (
+                      <li key={challenge}>{challenge}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {project.plannedImprovements?.length > 0 && (
+                <div className="project-details-card mb-4">
+                  <h2>Planned Improvements</h2>
+                  <ul className="project-details-list">
+                    {project.plannedImprovements.map((improvement) => (
+                      <li key={improvement}>{improvement}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {project.whatILearned?.length > 0 && (
+                <div className="project-details-card">
+                  <h2>What I Learned</h2>
+                  <ul className="project-details-list">
+                    {project.whatILearned.map((lesson) => (
+                      <li key={lesson}>{lesson}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             <div className="col-lg-4">
@@ -91,30 +168,6 @@ function ProjectDetailsPage() {
                 </div>
 
                 <div className="d-grid gap-2">
-                  <a
-                    href={project.liveDemo || "#"}
-                    className={`btn btn-dark ${
-                      !project.liveDemo ? "disabled" : ""
-                    }`}
-                    target={project.liveDemo ? "_blank" : undefined}
-                    rel={project.liveDemo ? "noreferrer" : undefined}
-                    aria-disabled={!project.liveDemo}
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href={project.github || "#"}
-                    className={`btn btn-outline-secondary ${
-                      !project.github ? "disabled" : ""
-                    }`}
-                    target={project.github ? "_blank" : undefined}
-                    rel={project.github ? "noreferrer" : undefined}
-                    aria-disabled={!project.github}
-                  >
-                    GitHub Repository
-                  </a>
-
                   <Link to="/#contact" className="btn btn-outline-secondary">
                     Discuss a Similar Project
                   </Link>

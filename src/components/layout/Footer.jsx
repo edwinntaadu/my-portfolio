@@ -31,20 +31,13 @@ function Footer() {
 
           <div className="col-lg-3">
             <div className="footer-socials">
-              <a href="#" aria-label="GitHub">
+              <a
+                href={personalInfo.github}
+                aria-label="GitHub"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="bi bi-github"></i>
-              </a>
-
-              <a href="#" aria-label="LinkedIn">
-                <i className="bi bi-linkedin"></i>
-              </a>
-
-              <a href="#" aria-label="Instagram">
-                <i className="bi bi-instagram"></i>
-              </a>
-
-              <a href="#" aria-label="Twitter">
-                <i className="bi bi-twitter-x"></i>
               </a>
             </div>
           </div>

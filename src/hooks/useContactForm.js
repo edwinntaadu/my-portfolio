@@ -99,7 +99,7 @@ function useContactForm() {
       });
 
       setFormValues(initialValues);
-    } catch (error) {
+    } catch {
       setStatus({
         loading: false,
         success: "",
