@@ -2,7 +2,7 @@ import Button from "../common/Button";
 
 function HeroSection({ personalInfo }) {
   return (
-    <section id="home" className="hero-section py-5">
+    <section className="hero-section py-5">
       <div className="container">
         <div className="row hero-content-row align-items-center justify-content-center">
           <div className="col-lg-8 text-center">

@@ -10,7 +10,7 @@ function PortfolioSection() {
   );
 
   return (
-    <section id="portfolio" className="portfolio-section py-5">
+    <section className="portfolio-section py-5">
       <div className="container">
         <div className="section-heading text-center mb-5" data-aos="fade-up">
           <p className="section-subtitle">Portfolio</p>

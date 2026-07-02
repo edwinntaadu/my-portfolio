@@ -16,8 +16,9 @@ function AboutSection({ personalInfo }) {
               {personalInfo.aboutDescription}
             </p>
             <p>
-              My Mathematics background strengthens the analytical thinking I
-              bring to both design decisions and technical problem-solving.
+              My Mathematics background helps me break down complex problems,
+              think through user flows logically, and build solutions with
+              structure and attention to detail.
             </p>
 
             <div className="mb-4" data-aos="fade-up" data-aos-delay="300">

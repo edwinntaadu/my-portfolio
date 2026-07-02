@@ -1,4 +1,5 @@
 import personalInfo from "../../data/personalInfo";
+import NavScrollLink from "../common/NavScrollLink";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,11 +22,11 @@ function Footer() {
 
           <div className="col-lg-4">
             <div className="footer-links">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#services">Services</a>
-              <a href="#portfolio">Portfolio</a>
-              <a href="#contact">Contact</a>
+              <NavScrollLink to="#home">Home</NavScrollLink>
+              <NavScrollLink to="#about">About</NavScrollLink>
+              <NavScrollLink to="#services">Services</NavScrollLink>
+              <NavScrollLink to="#portfolio">Portfolio</NavScrollLink>
+              <NavScrollLink to="#contact">Contact</NavScrollLink>
             </div>
           </div>
 

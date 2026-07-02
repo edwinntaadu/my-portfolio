@@ -3,12 +3,12 @@ const personalInfo = {
   greeting: "Hello, I'm",
   role: "Full-Stack Developer & UI/UX Designer",
   heroDescription:
-    "I design and build responsive, user-focused digital products, from interface concepts and prototypes to full-stack web applications.",
+    "I design and build responsive web applications, combining thoughtful UI/UX decisions with practical frontend and backend development.",
   aboutTitle: "About Me",
   aboutIntro:
-    "I'm a full-stack developer and UI/UX designer with a Mathematics background and a practical, problem-solving approach.",
+    "I'm a full-stack developer and UI/UX designer who builds practical, user-focused web experiences from concept to deployment.",
   aboutDescription:
-    "I combine UI/UX design and software development to create digital products that are both usable and technically practical. My process includes understanding user needs, planning flows, designing interfaces, and implementing responsive web experiences with clean frontend architecture and reliable backend functionality.",
+    "I enjoy turning product ideas into clear, responsive interfaces and working applications. My work connects user flows, interface design, frontend architecture, and backend functionality so the final product feels usable, reliable, and purposeful.",
   email: "edwinntaadu@gmail.com",
   whatsapp: "+4917672804054",
   whatsappDisplay: "+49 176 72804054",

@@ -67,7 +67,7 @@ function ContactSection({ personalInfo }) {
   }, []);
 
   return (
-    <section id="contact" className="contact-section py-5">
+    <section className="contact-section py-5">
       <div className="container">
         <div className="section-heading text-center mb-5" data-aos="fade-up">
           <p className="section-subtitle">Contact</p>
@@ -84,7 +84,7 @@ function ContactSection({ personalInfo }) {
               <div className="card-body p-4">
                 <span className="contact-status">Open to Opportunities</span>
 
-                <h3 className="mt-3 mb-2">Let's Build Something Great</h3>
+                <h3 className="mt-3 mb-2">Open to Roles and Projects</h3>
 
                 <p className="mb-4">
                   Whether you're looking to build a new web application, improve

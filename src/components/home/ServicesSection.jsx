@@ -3,7 +3,7 @@ import ServiceCard from "../cards/ServiceCard";
 
 function ServicesSection() {
   return (
-    <section id="services" className="services-section py-5">
+    <section className="services-section py-5">
       <div className="container">
         <div className="text-center mb-5" data-aos="fade-up">
           <p className="section-subtitle">What I Build</p>
